@@ -1,12 +1,17 @@
+var Global = {
+	"ENTER_KEY": 13
+}
+
 define([
-	'backbone'
+	'backbone',
+	'MainView'
     ],
-    function (Backbone) {
+    function (Backbone, MainView) {
         'use strict';
 	
 		var App = {
 			"init": function() {
-
+				new MainView();
 			}
 		};
 	

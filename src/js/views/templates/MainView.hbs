@@ -1,0 +1,15 @@
+<header>
+	<h2>{{title}}</h2>
+</header>
+<section class="search">
+	<input type="text" id="query" placeholder="{{searchPlaceHolder}}">
+	<select id="where">
+		{{#each where}}
+			<option value="{{this.val}}">{{this.label}}</option>
+		{{/each}}
+	</select>
+	<input type="text" id="whereText" placeholder="{{wherePlaceHolder}}">
+</section>
+<section class="results">
+	
+</section>

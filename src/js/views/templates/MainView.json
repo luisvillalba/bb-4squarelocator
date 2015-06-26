@@ -1,0 +1,15 @@
+{
+	"title": "FourSquare Locator",
+	"searchPlaceHolder": "What do you want to do?",
+	"wherePlaceHolder": "Where are you?",
+	"where": [
+		{
+			"val": 0,
+			"label": "Use my location"
+		},
+		{
+			"val": 1,
+			"label": "Custom"
+		}
+	]
+}

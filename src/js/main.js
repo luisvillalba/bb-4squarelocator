@@ -8,7 +8,9 @@ require.config({
 		"ls": "vendor/backbone.localstorage/backbone.localStorage",
 		"handlebars": "vendor/handlebars/handlebars",
 		"hbHelpers": "util/hb-helpers",
-		"router": "routers/router"
+		"router": "routers/router",
+		"MainView": "views/MainView",
+		"search": "collections/search"
     },
 	"shim": {
 		"underscore": {
