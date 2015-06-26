@@ -1,0 +1,4 @@
+.DS_Store
+src/js/vendor
+install/node_modules
+*.log

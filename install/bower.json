@@ -1,0 +1,29 @@
+{
+  "name": "backbone foursquare",
+  "version": "0.0.1",
+  "authors": [
+    "Luis Villalba"
+  ],
+  "description": "backbone foursquare",
+  "main": "index.html",
+  "moduleType": [
+    "amd"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "backbone": "~1.2.0",
+    "handlebars": "~3.0.3",
+    "grunt": "~0.4.5",
+    "grunt-cli": "~0.1.13",
+    "grunt-contrib-jshint": "~0.11.2",
+    "requirejs": "~2.1.18",
+    "backbone.localStorage": "~1.1.16",
+    "requirejs-text": "~2.0.14"
+  }
+}
