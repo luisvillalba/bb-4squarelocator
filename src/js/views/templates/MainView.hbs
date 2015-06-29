@@ -1,15 +1,30 @@
-<header>
-	<h2>{{title}}</h2>
-</header>
-<section class="search">
-	<input type="text" id="query" placeholder="{{searchPlaceHolder}}">
-	<select id="where">
-		{{#each where}}
-			<option value="{{this.val}}">{{this.label}}</option>
-		{{/each}}
-	</select>
-	<input type="text" id="whereText" placeholder="{{wherePlaceHolder}}">
-</section>
-<section class="results">
-	
-</section>
+<div class="searchForm">
+    <div class="row">
+        <div class="col-xs-12">
+            <input type="text" class="form-control"  id="query" placeholder="{{searchPlaceHolder}}">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <h4>{{whereTitle}}</h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-4 whereSelect">
+            <select id="where" class="form-control">
+                {{#each where}}
+                <option value="{{this.val}}">{{this.label}}</option>
+                {{/each}}
+            </select>
+        </div>
+        <div class="col-xs-12 col-sm-4 whereText">
+            <input type="text" class="form-control" id="whereText" placeholder="{{writeCity}}">
+        </div>
+    </div>
+</div>
+<div class="row venueDetails">
+    
+</div>
+<div class="row results">
+    
+</div>

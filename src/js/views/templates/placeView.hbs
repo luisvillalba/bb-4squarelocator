@@ -1,0 +1,41 @@
+<div class="venue">
+    <div class="row viewMoreVenue" data-venueId="{{venue.id}}">
+        <div class="col-xs-12 visible-xs hidden-sm">
+            <h5>
+                <span class="icon">
+                    <img src="{{venue.categories.0.icon.prefix}}32{{venue.categories.0.icon.suffix}}"/>
+                </span>
+                {{venue.name}}
+            </h5>
+        </div>
+        <div class="col-xs-12 col-sm-4 thumbContainer">
+            <img class="venueThumb" src="
+                                         {{#if venue.photos.groups.0.items.0.prefix}}
+                                            {{venue.photos.groups.0.items.0.prefix}}500x500{{venue.photos.groups.0.items.0.suffix}}
+                                         {{else}}
+                                            img/placeholder.png
+                                         {{/if}}
+                                         ">
+        </div>
+        <div class="col-xs-12 col-sm-8">
+            <h5 class="visible-sm visible-md visible-lg">
+                <span class="icon">
+                    <img src="{{venue.categories.0.icon.prefix}}32{{venue.categories.0.icon.suffix}}"/>
+                </span>
+                {{venue.name}}
+            </h5>
+            <p class="visible-sm visible-md visible-lg distance">
+                {{venue.location.distance}} mtrs.
+            </p>
+            {{#if venue.contact.phone}}
+                <p><span class="glyphicon glyphicon-earphone"></span> {{venue.contact.phone}}</p>
+            {{/if}}
+            {{#if venue.location.address}}
+                <p><span class="glyphicon glyphicon-map-marker"></span> {{venue.location.address}}, {{venue.location.city}}, {{venue.location.cc}}</p>
+            {{/if}}
+            {{#if venue.url}}
+            <p><span class="glyphicon glyphicon-globe"></span> <a href="{{venue.url}}">{{venue.url}}</a></p>
+            {{/if}}
+        </div>
+    </div>
+</div>

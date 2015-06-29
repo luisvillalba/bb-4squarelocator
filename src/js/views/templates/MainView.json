@@ -1,7 +1,8 @@
 {
-	"title": "FourSquare Locator",
+	"title": "Store Locator",
 	"searchPlaceHolder": "What do you want to do?",
-	"wherePlaceHolder": "Where are you?",
+	"whereTitle": "Where are you?",
+    "writeCity": "Write the name of your city",
 	"where": [
 		{
 			"val": 0,

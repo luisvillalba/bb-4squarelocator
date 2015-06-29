@@ -4,7 +4,6 @@ define([
 	function (Backbone) {
 		var Todo = Backbone.Model.extend({
 			"defaults": {
-				
 			}
 		});
 		

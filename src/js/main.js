@@ -9,8 +9,11 @@ require.config({
 		"handlebars": "vendor/handlebars/handlebars",
 		"hbHelpers": "util/hb-helpers",
 		"router": "routers/router",
-		"MainView": "views/MainView",
-		"search": "collections/search"
+		"MainView": "views/mainView",
+		"search": "collections/search",
+        "place": "models/place",
+        "placeView": "views/placeView",
+        "popularView": "views/popularView",
     },
 	"shim": {
 		"underscore": {

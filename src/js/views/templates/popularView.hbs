@@ -1,0 +1,8 @@
+<img class="popularImg" data-venueId="{{venue.id}}" src="
+     {{#if venue.photos.groups.0.items.0.prefix}}
+        {{venue.photos.groups.0.items.0.prefix}}500x500{{venue.photos.groups.0.items.0.suffix}}
+     {{else}}
+        img/placeholder.png
+     {{/if}}
+">
+<h5 class="popularName">{{venue.name}}</h5>
