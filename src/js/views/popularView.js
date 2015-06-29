@@ -7,11 +7,11 @@ define([
 		'use strict';
 	
 		var PopularView = Backbone.View.extend({
-			"tagName": 'div',
+			"tagName": "div",
             
             "template": Handlebars.compile(template),
             
-            "className": 'popularContainer',
+            "className": "popularContainer",
             
             "initialize": function() {
                 if (this.model.get('size') == 'small') {

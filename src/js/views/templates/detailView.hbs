@@ -11,12 +11,15 @@
      ">
 </div>
 <div class="detailText col-xs-12 col-sm-7">
-    <h5>
+    <h5 class="detail-title">
         <span class="icon">
             <img src="{{categories.0.icon.prefix}}32{{categories.0.icon.suffix}}"/>
         </span>
         {{name}}
     </h5>
+    {{#if rating}}
+    <p class="rating"><span class="glyphicon glyphicon-star"></span>{{rating}} <span class="ratingdisclaimer">(based in the opinion of {{ratingSignals}} people)</span></p>
+    {{/if}}
     {{#if contact.phone}}
         <p><span class="glyphicon glyphicon-earphone"></span> {{contact.phone}}</p>
     {{/if}}
@@ -28,13 +31,18 @@
         <span class="glyphicon glyphicon-globe"></span> <a href="{{url}}">{{url}}</a>
     </p>
     {{/if}}
+    {{#if likes}}
+    <p class="likes">
+        <span class="glyphicon glyphicon-thumbs-up"></span> {{likes.count}} people likes this place
+    </p>
+    {{/if}}
 </div>
 <div class="col-xs-12">
     {{#if location.lat}}
         <p class="mapToggle">
             <spam class="mapButton">
                 <span class="glyphicon glyphicon-chevron-down"></span> 
-                <a href="#map" class="viewMap" id="viewMap" data-mapstate="closed" data-lat="{{location.lat}}" data-lng="{{location.lng}}">View in Google Maps</a>
+                <a class="viewMap" id="viewMap" data-mapstate="closed" data-lat="{{location.lat}}" data-lng="{{location.lng}}">View in Google Maps</a>
             </spam>
         </p>
     {{/if}}

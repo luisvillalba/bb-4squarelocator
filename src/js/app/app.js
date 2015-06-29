@@ -4,14 +4,16 @@ var Global = {
 
 define([
 	'backbone',
-	'MainView'
+	'router'
     ],
-    function (Backbone, MainView) {
+    function (Backbone, router) {
         'use strict';
 	
 		var App = {
 			"init": function() {
-				new MainView();
+				new router();
+                
+                Backbone.history.start();
 			}
 		};
 	

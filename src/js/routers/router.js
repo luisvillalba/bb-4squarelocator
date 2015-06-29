@@ -1,14 +1,21 @@
 define([
-'backbone'
+'backbone',
+'MainView'
 ],
-    function (Backbone) {
+    function (Backbone, MainView) {
         var Router = Backbone.Router.extend({
             routes: {
-                'val:param': 'method'
+                "/": "showPopulars",
+                "*populars": "showPopulars"
+            },
+            
+            "initialize": function() {
+                this.mainView = new MainView();
             },
 
-            method: function (param) {
-
+            "showPopulars": function (param) {
+                console.log("populares");
+                this.mainView.searchPopular();
             }
         });
     

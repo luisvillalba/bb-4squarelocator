@@ -179,7 +179,13 @@ h5.popularName {
 .venueDetails {
     display: none;
     position: relative;
-}
+} 
+
+.venueDetails .icon {
+    width: 25px;
+    height: 25px;
+    padding: 0px 2px 0 2px;
+} 
 
 .popularContainer {
     padding: 0;
@@ -223,6 +229,22 @@ h5.popularName {
     box-shadow: 0px 1px 6px rgba(0,0,0,0.4);
 }
 
+.likes {
+    text-align: right;
+    color: #0D47A1;
+}
+
+.rating {
+    font-size: 1.4em;
+    color: #4CAF50;
+    margin-top: 10px;
+}
+
+.ratingdisclaimer {
+    font-size: 0.5em;
+    color: grey;
+}
+
 .mapToggle {
     text-align: center;
 }
@@ -253,6 +275,11 @@ h5.popularName {
         height: 20px;
         padding: 3px;
         cursor: pointer;
+    }
+    
+    .detail-title {
+        font-size: 1.6em;
+        margin-bottom: 0;
     }
     
     .venue h5 {
