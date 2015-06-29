@@ -42,7 +42,10 @@ define([
 				"keypress #where": "keyPressedOnSearch",
                 "keypress #whereText": "keyPressedOnSearch",
                 "change #where": "locationChanged",
-                "click .viewMoreVenue": "viewMoreVenue"
+                "click .viewMoreVenue": "viewMoreVenue",
+                "click .closeDetail": "closeDetail",
+                "click .popularImg": "viewMoreVenue",
+                "click .closeDetailXS": "closeDetail"
 			},
 			
 			/* Main template */
@@ -140,11 +143,13 @@ define([
             },
             
             "viewMoreVenue": function(e) {
-                var id = e.currentTarget.getAttribute('data-venueid'),
-                    detView = new detailView({venueId: id});
+                console.log("viewMoreVenue");
+                var id = e.currentTarget.getAttribute('data-venueid');
                 
-                this.$venueDetails.html(detView.el).show();
-                this.$results.hide();
+                this.detView = new detailView({venueId: id});
+                console.log(this.detView);
+                this.$venueDetails.html(this.detView.el);
+                this.openDetail();
             },
 			
 			/* Handles the keypress event looking for an Enter key */
@@ -211,12 +216,23 @@ define([
                 
                 param.ll = window.sessionStorage.getItem('ll');
                 
+                this.$venueDetails.empty();
                 this.$venueDetails.hide();
-                this.$results.show();
 
                 /* Executes the new search */
                 this.collectionPopulars.fetchSearch(param);
-			}
+			},
+            
+            "closeDetail": function() {
+                this.$results.show();
+                this.detView.remove();
+                this.$venueDetails.hide();
+            },
+            
+            "openDetail": function() {
+                this.$results.hide();
+                this.$venueDetails.show();
+            }
 		});
 	
 		return MainView;
