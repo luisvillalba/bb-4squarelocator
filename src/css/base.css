@@ -115,6 +115,10 @@ body {
     display: none;
 }
 
+.venueDetails {
+    padding: 15px;
+}
+
 .icon {
     background: #5cb85c;
     width: 22px;
@@ -190,6 +194,23 @@ h5.popularName {
     .venue {
         height: 155px;
         overflow: visible;
+    }
+    
+    .detailText {
+        position: relative;
+    }
+    
+    .closeDetail {
+        position: absolute;
+        top: 2px;
+        right: 15px;
+        background-color: red;
+        display: inline-block;
+        color: white;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        padding: 3px;
     }
     
     .venue h5 {

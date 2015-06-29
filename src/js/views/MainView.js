@@ -4,14 +4,15 @@ define([
 		'backbone',
 		'handlebars',
 		'search',
-        'views/placeView',
-        'views/popularView',
+        'placeView',
+        'popularView',
+        'detailView',
 		'text!views/templates/mainView.hbs',
 		'text!views/templates/mainView.json',
 	], 
-	function (_, $, Backbone, Handlebars, search, placeView, popularView, template, data) {
+	function (_, $, Backbone, Handlebars, search, placeView, popularView, detailView, template, data) {
 		'use strict';
-	
+	   console.log(detailView);
 		var MainView = Backbone.View.extend({
 			"selectors": {
 				"id": {
@@ -21,7 +22,8 @@ define([
 				},
                 "class": {
                     "results": ".results",
-                    "whereText": ".whereText"
+                    "whereText": ".whereText",
+                    "venueDetails": ".venueDetails"
                 }
 			},
 			
@@ -113,6 +115,7 @@ define([
 				this.$where = this.$el.find(this.selectors.id.where);
 				this.$whereText = this.$el.find(this.selectors.id.whereText);
                 this.$results = this.$el.find(this.selectors.class.results);
+                this.$venueDetails = this.$el.find(this.selectors.class.venueDetails);
                 /* Starts to listens the events */
                 this.listenEvents();
                 this.searchPopular();
@@ -137,9 +140,11 @@ define([
             },
             
             "viewMoreVenue": function(e) {
-                var id = e.currentTarget.getAttribute('data-venueid');
-                console.log(this.collection);
-                console.log(id);
+                var id = e.currentTarget.getAttribute('data-venueid'),
+                    detView = new detailView({venueId: id});
+                
+                this.$venueDetails.html(detView.el).show();
+                this.$results.hide();
             },
 			
 			/* Handles the keypress event looking for an Enter key */
@@ -179,6 +184,9 @@ define([
 				
                 param.query = $.trim(this.$query.val())
                 
+                this.$venueDetails.hide();
+                this.$results.show();
+                
 				switch (where) {
 					case "0":
                         param.ll = window.sessionStorage.getItem('ll');
@@ -202,6 +210,9 @@ define([
                     result;
                 
                 param.ll = window.sessionStorage.getItem('ll');
+                
+                this.$venueDetails.hide();
+                this.$results.show();
 
                 /* Executes the new search */
                 this.collectionPopulars.fetchSearch(param);

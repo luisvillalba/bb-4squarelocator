@@ -14,6 +14,7 @@ require.config({
         "place": "models/place",
         "placeView": "views/placeView",
         "popularView": "views/popularView",
+        "detailView": "views/detailView"
     },
 	"shim": {
 		"underscore": {

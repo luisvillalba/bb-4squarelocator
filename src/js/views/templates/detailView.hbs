@@ -1,0 +1,27 @@
+<div class="col-xs-12 col-sm-5">
+    <img class="venueThumb" src="
+             {{#if photos.groups.0.items.0.prefix}}
+                {{photos.groups.0.items.0.prefix}}500x500{{photos.groups.0.items.0.suffix}}
+             {{else}}
+                img/placeholder.png
+             {{/if}}
+     ">
+</div>
+<div class="detailText col-xs-12 col-sm-7">
+    <h5>
+        <span class="icon">
+            <img src="{{categories.0.icon.prefix}}32{{categories.0.icon.suffix}}"/>
+        </span>
+        {{name}}
+    </h5>
+    {{#if contact.phone}}
+        <p><span class="glyphicon glyphicon-earphone"></span> {{contact.phone}}</p>
+    {{/if}}
+    {{#if location.address}}
+        <p><span class="glyphicon glyphicon-map-marker"></span> {{location.address}}, {{location.city}}, {{location.cc}}</p>
+    {{/if}}
+    {{#if venue.url}}
+    <p><span class="glyphicon glyphicon-globe"></span> <a href="{{url}}">{{url}}</a></p>
+    {{/if}}
+    <span class="closeDetail glyphicon glyphicon-remove"></span>
+</div>

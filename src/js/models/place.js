@@ -2,11 +2,11 @@ define([
 		'backbone'
 	], 
 	function (Backbone) {
-		var Todo = Backbone.Model.extend({
+		var Place = Backbone.Model.extend({
 			"defaults": {
 			}
 		});
 		
-		return  Todo;
+		return  Place;
 	}
 );
