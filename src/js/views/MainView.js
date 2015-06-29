@@ -148,6 +148,7 @@ define([
                 
                 this.detView = new detailView({venueId: id});
                 console.log(this.detView);
+                console.log(this.detView);
                 this.$venueDetails.html(this.detView.el);
                 this.openDetail();
             },
