@@ -56,6 +56,7 @@ define([
 				this.$el.html(this.template(this.defaultData));
 			},
             
+			/* Shows the results of a search */
             "showResults": function() {
                 var i,
                     itemView;
@@ -73,6 +74,7 @@ define([
                 }
             },
             
+			/* Shows the popular sites arround the place of the users */
             "showPopulars": function() {
                 var i,
                     itemView;
@@ -108,20 +110,23 @@ define([
                 /* Get the initial view */
                 this.render();
                 
+				/* Sets the jquery objects*/
 				this.$query = this.$el.find(this.selectors.id.query);
 				this.$where = this.$el.find(this.selectors.id.where);
 				this.$whereText = this.$el.find(this.selectors.id.whereText);
                 this.$results = this.$el.find(this.selectors.class.results);
                 this.$venueDetails = this.$el.find(this.selectors.class.venueDetails);
-                /* Starts to listens the events */
+             
                 this.listenEvents();
             },
             
+			/* Starts to listens the events */
             "listenEvents": function() {
                 this.listenTo(this.collection, 'sync', _.bind(this.showResults, this));
                 this.listenTo(this.collectionPopulars, 'sync', _.bind(this.showPopulars, this));
             },
             
+			/* Gets the user location based on the GPS or aproximated position */
             "findUserLocation": function() {
                 navigator.geolocation.getCurrentPosition(
                     function(pos) {
@@ -134,6 +139,10 @@ define([
                 );
             },
             
+			/**
+			 * Shows venue details
+			 * @param e Event to handle
+			 */
             "viewMoreVenue": function(e) {
                 var id = e.currentTarget.getAttribute('data-venueid');
                 
@@ -155,6 +164,7 @@ define([
 				}
 			},
             
+			/* Handles the event of changing from GPS to Custom location */
             "locationChanged": function() {
 				var value = this.$where.val(),
                     display;
@@ -176,7 +186,7 @@ define([
                     result,
 					where = this.$where.val();
 				
-                param.query = $.trim(this.$query.val())
+                param.query = $.trim(this.$query.val());
                 
                 this.$venueDetails.hide();
                 this.$results.show();
@@ -196,6 +206,22 @@ define([
 						break;
 				}
 			},
+			
+			/* Executes a search */
+			"searchArroundMe": function(query) {
+				var param = {},
+                    result;
+				
+                param.query = $.trim(query);
+                
+                this.$venueDetails.hide();
+                this.$results.show();
+				
+				param.ll = window.sessionStorage.getItem('ll');
+				
+				/* Executes the new search */
+				this.collection.fetchSearch(param);
+			},
             
             /* Executes a search */
 			"searchPopular": function() {
@@ -211,12 +237,15 @@ define([
                 this.collectionPopulars.fetchSearch(param);
 			},
             
+			/* Hides the detail container and shows the results again */
             "closeDetail": function() {
                 this.$results.show();
-                this.detView.remove();
+                $('.map').remove();
+				this.detView.remove();
                 this.$venueDetails.hide();
             },
             
+			/* Hides the results container and shows the */
             "openDetail": function() {
                 this.$results.hide();
                 this.$venueDetails.show();

@@ -39,10 +39,10 @@ define([
             "showMap": function (e) {
                 if ($(this.selectors.class.viewMap).data('mapstate') == 'closed' || $(this.selectors.class.viewMap).data('mapstate') == undefined) {
                     console.log("opening map");
-                    $(this.selectors.class.map).attr("style", "");
+                    $(this.selectors.class.map).css("display", "block");
                     var mapProp = {
                         "center": new google.maps.LatLng(e.currentTarget.getAttribute('data-lat'),e.currentTarget.getAttribute('data-lng')),
-                        "zoom": 18,
+                        "zoom": 17,
                         "mapTypeId": google.maps.MapTypeId.ROADMAP
                     },
                     map = new google.maps.Map(document.getElementById(this.selectors.id.map), mapProp),
@@ -52,14 +52,13 @@ define([
                     });
 
                     marker.setMap(map);
-                    
-                    $(this.selectors.class.map).css("display", "block");
+					
+                    google.maps.event.trigger(map, 'resize');
                     $(this.selectors.class.viewMap).html('Close map').data('mapstate','open');
                 } else {
                     console.log("closing map");
                     $(this.selectors.class.viewMap).data('mapstate','closed').html('View in Google Maps');
                     $(this.selectors.class.map).css("display", "none");
-                    $(this.selectors.class.map).html('');
                 }
             },
             

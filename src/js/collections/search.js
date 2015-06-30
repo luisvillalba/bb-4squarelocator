@@ -14,6 +14,7 @@ define([
             
 			"url": "https://api.foursquare.com/v2/venues/explore",
             
+			/* Overrides the way in that the collection is being parsed */
             "parse": function(resp) {
                 return resp.response.groups[0].items;
             },

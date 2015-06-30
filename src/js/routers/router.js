@@ -5,8 +5,9 @@ define([
     function (Backbone, MainView) {
         var Router = Backbone.Router.extend({
             routes: {
-                "/": "showPopulars",
-                "*populars": "showPopulars"
+                "": "showPopulars",
+				"arroundme/:query": "searchArroundMe",
+                "populars": "showPopulars"
             },
             
             "initialize": function() {
@@ -14,8 +15,13 @@ define([
             },
 
             "showPopulars": function (param) {
-                console.log("populares");
+                console.log("showPopulars");
                 this.mainView.searchPopular();
+            },
+			
+			"searchArroundMe": function (param) {
+                console.log("searchArroundMe" + param);
+                this.mainView.searchArroundMe(param);
             }
         });
     
