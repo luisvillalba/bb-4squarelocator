@@ -1,8 +1,8 @@
 require.config({
-    "baseUrl": "js",
-    "paths": {
-		"text" : "vendor/requirejs-text/text",
-        "jquery": "vendor/jquery/dist/jquery.min",
+	"baseUrl": "js",
+	"paths": {
+		"text": "vendor/requirejs-text/text",
+		"jquery": "vendor/jquery/dist/jquery.min",
 		"underscore": "vendor/underscore/underscore-min",
 		"backbone": "vendor/backbone/backbone-min",
 		"ls": "vendor/backbone.localstorage/backbone.localStorage",
@@ -11,11 +11,11 @@ require.config({
 		"router": "routers/router",
 		"MainView": "views/mainView",
 		"search": "collections/search",
-        "place": "models/place",
-        "placeView": "views/placeView",
-        "popularView": "views/popularView",
-        "detailView": "views/detailView"
-    },
+		"place": "models/place",
+		"placeView": "views/placeView",
+		"popularView": "views/popularView",
+		"detailView": "views/detailView"
+	},
 	"shim": {
 		"underscore": {
 			"exports": "_"
@@ -28,15 +28,15 @@ require.config({
 			"deps": ['backbone'],
 			"exports": "Backbone"
 		},
-        'hbHelpers': {
-            deps: ['handlebars'],
-            exports: 'Handlebars'
-        }
+		'hbHelpers': {
+			deps: ['handlebars'],
+			exports: 'Handlebars'
+		}
 	}
 });
 
 require([
-	'app/app'
-], function(App) {
+'app/app'
+], function (App) {
 	App.init();
 });
