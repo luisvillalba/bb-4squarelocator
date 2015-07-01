@@ -27,6 +27,18 @@ body {
     letter-spacing: 1px;
 }
 
+.navbar ul {
+    list-style: none;
+}
+
+.navbar li {
+    float: right;
+}
+
+.navbar ul a {
+    color: white;
+}
+
 .results {
     padding: 0 15px 15px 15px;
 }
