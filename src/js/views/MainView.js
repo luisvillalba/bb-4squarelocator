@@ -54,6 +54,7 @@ define([
 			"render": function () {
 				/* Bring the template and populate it with the data from the config file */
 				this.$el.html(this.template(this.defaultData));
+				return this;
 			},
 
 			/* Shows the results of a search */
