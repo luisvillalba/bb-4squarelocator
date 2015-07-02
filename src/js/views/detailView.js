@@ -16,6 +16,7 @@ define([
 				"id": {
 					"map": "map"
 				},
+				
 				"class": {
 					"map": ".map",
 					"viewMap": ".viewMap",
@@ -35,7 +36,6 @@ define([
 				this.listenTo(this.model, 'sync', _.bind(this.render, this));
 				this.model.getData();
 				$(this.selectors.class.viewMap).data('mapstate', 'closed');
-				console.log(this.selectors.id.map);
 			},
 
 			"showMap": function (e) {

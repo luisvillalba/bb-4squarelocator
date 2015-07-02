@@ -1,7 +1,8 @@
 define([
-'backbone'
+'backbone',
+'models/favorite'
 ],
-	function (Backbone) {
+	function (Backbone, favorite) {
 		var Details = Backbone.Model.extend({
 			"requestParam": {
 				"v": 20140806,
@@ -14,6 +15,16 @@ define([
 				this.fetch({
 					data: $.param(this.requestParam)
 				});
+			},
+			
+			"initialize": function() {
+				this.set('favorite', new favorite());
+				this.updateFavorite();
+			},
+			
+			"updateFavorite": function() {
+				console.log("Update favorite");
+				this.get('favorite').getData(window.sessionStorage.getItem('id_user'), this.get('venueId'));
 			},
 
 			"parse": function (resp) {

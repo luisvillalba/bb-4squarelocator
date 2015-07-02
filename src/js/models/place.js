@@ -1,9 +1,10 @@
 define([
 'backbone'
 ],
-	function (Backbone) {
+	function (Backbone, favorite) {
 		var Place = Backbone.Model.extend({
-			"defaults": {}
+			
+			"defaults": {},
 		});
 
 		return Place;

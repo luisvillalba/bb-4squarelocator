@@ -12,7 +12,6 @@ define([
 		var App = {
 			"init": function () {
 				new router();
-
 				Backbone.history.start();
 			}
 		};
