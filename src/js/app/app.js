@@ -3,20 +3,20 @@ var Global = {
 }
 
 define([
-	'backbone',
-	'router'
-    ],
-    function (Backbone, router) {
-        'use strict';
-	
+'backbone',
+'router'
+],
+	function (Backbone, router) {
+		'use strict';
+
 		var App = {
-			"init": function() {
+			"init": function () {
 				new router();
-                
-                Backbone.history.start();
+
+				Backbone.history.start();
 			}
 		};
-	
+
 		return App;
-    }
+	}
 );
