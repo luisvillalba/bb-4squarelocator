@@ -1,0 +1,14 @@
+{
+  "name": "grunt-contrib-jshint",
+  "homepage": "https://github.com/gruntjs/grunt-contrib-jshint",
+  "version": "0.11.2",
+  "_release": "0.11.2",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.11.2",
+    "commit": "a2becd8aa6c640e1c9bcc63cfee7ce26ff172f1c"
+  },
+  "_source": "git://github.com/gruntjs/grunt-contrib-jshint.git",
+  "_target": "~0.11.2",
+  "_originalSource": "grunt-contrib-jshint"
+}
