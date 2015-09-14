@@ -1,13 +1,13 @@
 define([
-		'backbone',
+        'backbone',
         'handlebars',
         'text!views/templates/popularView.hbs',
-	], 
-	function (Backbone, Handlebars, template) {
-		'use strict';
-	
-		var PopularView = Backbone.View.extend({
-			"tagName": "div",
+    ], 
+    function (Backbone, Handlebars, template) {
+        'use strict';
+    
+        var PopularView = Backbone.View.extend({
+            "tagName": "div",
             
             "template": Handlebars.compile(template),
             
@@ -23,10 +23,10 @@ define([
             
             "render": function() {
                 this.$el.html(this.template(this.model.attributes));
-				return this;
+                return this;
             }
-		});
-	
-		return PopularView;
-	}
+        });
+    
+        return PopularView;
+    }
 );

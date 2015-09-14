@@ -218,7 +218,7 @@ h5.popularName {
     margin-bottom: 15px;
     transition: height 0.3s;
     display: none;
-	max-width: none;
+    max-width: none;
 }
 
 .mapButton {

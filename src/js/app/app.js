@@ -1,22 +1,22 @@
 var Global = {
-	"ENTER_KEY": 13
+    "ENTER_KEY": 13
 }
 
 define([
 'backbone',
 'router'
 ],
-	function (Backbone, router) {
-		'use strict';
+    function (Backbone, router) {
+        'use strict';
 
-		var App = {
-			"init": function () {
-				new router();
+        var App = {
+            "init": function () {
+                new router();
 
-				Backbone.history.start();
-			}
-		};
+                Backbone.history.start();
+            }
+        };
 
-		return App;
-	}
+        return App;
+    }
 );

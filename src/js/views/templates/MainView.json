@@ -1,16 +1,16 @@
 {
-	"title": "Store Locator",
-	"searchPlaceHolder": "What do you want to do?",
-	"whereTitle": "Where are you?",
+    "title": "Store Locator",
+    "searchPlaceHolder": "What do you want to do?",
+    "whereTitle": "Where are you?",
     "writeCity": "Write the name of your city",
-	"where": [
-		{
-			"val": 0,
-			"label": "Use my location"
-		},
-		{
-			"val": 1,
-			"label": "Custom"
-		}
-	]
+    "where": [
+        {
+            "val": 0,
+            "label": "Use my location"
+        },
+        {
+            "val": 1,
+            "label": "Custom"
+        }
+    ]
 }

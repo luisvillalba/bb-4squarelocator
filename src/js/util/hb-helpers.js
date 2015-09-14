@@ -4,14 +4,14 @@
 define([
 'handlebars'
 ],
-	function (Handlebars) {
-		Handlebars.registerHelper('ifEqual', function (firstValue, secondValue, options) {
-			if (firstValue === secondValue) {
-				return options.fn(this);
-			}
-			return options.inverse(this);
-		});
+    function (Handlebars) {
+        Handlebars.registerHelper('ifEqual', function (firstValue, secondValue, options) {
+            if (firstValue === secondValue) {
+                return options.fn(this);
+            }
+            return options.inverse(this);
+        });
 
-		return Handlebars;
-	}
+        return Handlebars;
+    }
 );
