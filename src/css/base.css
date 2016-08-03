@@ -1,324 +1,323 @@
 body {
-    background: #f2f2f2;
+  background: #f2f2f2;
 }
 
 .container {
-    background: #fff;
-    padding: 0;
-    padding-bottom: 15px;
-    box-shadow: 0px 1px 2px rgba(0,0,0,0.2);
-    min-height: 400px;
+  background-color: #fff;
+  padding: 0 0 15px 0;
+  box-shadow: 0px 1px 2px rgba(0,0,0,0.2);
+  min-height: 400px;
 }
 
 .navbar {
-    margin-bottom: 0px;
-    color: white;
-    background: #0D47A1;
-    border: 0px;
+  margin-bottom: 0px;
+  color: white;
+  background-color: #0D47A1;
+  border: 0px;
 }
 
 .navbar h6 {
-    height: 20px;
-    color: white;
-    margin-left: 30px;
-    margin-top: -2px;
-    font-weight: 200;
-    font-size: 0.5em;
-    letter-spacing: 1px;
+  height: 20px;
+  color: white;
+  margin-left: 30px;
+  font-weight: 200;
+  font-size: 0.5em;
+  letter-spacing: 1px;
 }
 
 .results {
-    padding: 0 15px 15px 15px;
+  padding: 0 15px 15px 15px;
 }
 
 .results h5 {
-    color: #0D47A1;
+  color: #0D47A1;
 }
 
 .results h5.yes {
-    color: #9E9E9E;
-    font-weight: 200;
+  color: #9E9E9E;
+  font-weight: 200;
 }
 
 .viewMoreVenue {
-    margin-top: 0px;
-    border-top: 1px solid #C3C3C3;
+  margin-top: 0px;
+  border-top: 1px solid #C3C3C3;
 }
 
 .navbar h6 span {
-    display: inline-block;
-    background: url('../img/foursquare.png');
-    background-size: contain;
-    width: 11px;
-    height: 15px;
-    position: relative;
-    top: 4px;
+  background: url('../img/foursquare.png');
+  background-size: contain;
+  display: inline-block;
+  width: 11px;
+  height: 15px;
+  position: relative;
+  top: 4px;
 }
 
 .navbar h1 {
-    padding: 0;
-    margin: 0;
-    font-size: 1.5em;
-    font-weight: 400;
-    color: white;
-    text-shadow: 0 -1px 0 rgba(0,0,0,1);
+  padding: 0;
+  margin: 0;
+  font-size: 1.5em;
+  font-weight: 400;
+  color: white;
+  text-shadow: 0 -1px 0 rgba(0,0,0,1);
 }
 
 .navbar .container {
-    min-height: 0;
-    box-shadow: none;
-    background: none;
-    padding-left: 15px;
+  min-height: 0;
+  box-shadow: none;
+  background: none;
+  padding-left: 15px;
 }
 
 .searchForm {
-    background: url('../img/bokeh.jpg');
-    background-size: 100%;
-    padding: 0 15px 15px 15px;
-    border-bottom: 8px solid #CFD8DC;
+  background: url('../img/bokeh.jpg');
+  background-size: 100%;
+  padding: 0 15px 15px 15px;
+  border-bottom: 8px solid #CFD8DC;
 }
 
 .searchForm h4 {
-    color: white;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
-    text-align: center;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+  text-align: center;
 }
 
 .searchForm input {
-    text-align: center;
-    background: rgba(255,255,255,0.9);
+  text-align: center;
+  background: rgba(255,255,255,0.9);
 }
 
 .searchForm select {
-    text-align: center;
-    background: rgba(255,255,255,0.9);
+  text-align: center;
+  background: rgba(255,255,255,0.9);
 }
 
 #query {
-    margin-top: 15px;
-    font-size: 1.6em;
-    height: 1.6em;
+  margin-top: 15px;
+  font-size: 1.6em;
+  height: 1.6em;
 }
 
 .footer {
-    margin-top: 10px;
-    text-align: center;
-    color: dimgray;
-    font-size: 0.8em;
+  margin-top: 10px;
+  text-align: center;
+  color: dimgray;
+  font-size: 0.8em;
 }
 
 .whereSelect {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .whereText {
-    display: none;
+  display: none;
 }
 
 .venueDetails {
-    padding: 15px;
+  padding: 15px;
 }
 
 .icon {
-    background: #5cb85c;
-    width: 22px;
-    height: 22px;
-    padding: 1px;
-    display: inline-block;
-    border-radius: 50%;
-    box-sizing: border-box;
+  background: #5cb85c;
+  width: 22px;
+  height: 22px;
+  padding: 1px;
+  display: inline-block;
+  border-radius: 50%;
+  box-sizing: border-box;
 }
 
 .icon img {
-    width: 20px;
+  width: 20px;
 }
 
 .venue {
-    padding: 10px;
+  padding: 10px;
 }
 
 .venue p {
-    margin-top: 10px;
-    margin-bottom: 0px;
+  margin-top: 10px;
+  margin-bottom: 0px;
 }
 
 .venue .row {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .venue h5 {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .venueThumb {
-    width: 100%;
-    border: 10px solid #f2f2f2;
-    box-shadow: 0px 1px 4px rgba(0,0,0,0.4);
+  width: 100%;
+  border: 10px solid #f2f2f2;
+  box-shadow: 0px 1px 4px rgba(0,0,0,0.4);
 }
 
 .popularImg {
-    width: 100%;
+  width: 100%;
 }
 
 .popularImg {
-    opacity: 0.5;
-    transition: opacity 0.2s ease-in-out;
+  opacity: 0.5;
+  transition: opacity 0.2s ease-in-out;
 }
 
 .popularImg:hover {
-    opacity: 1;
+  opacity: 1;
 }
 
 h5.popularName {
-    position: absolute;
-    bottom: 0;
-    left: 15px;
-    color: white;
+  position: absolute;
+  bottom: 0;
+  left: 15px;
+  color: white;
 }
 
 .venueDetails {
-    display: none;
-    position: relative;
+  display: none;
+  position: relative;
 } 
 
 .venueDetails .icon {
-    width: 25px;
-    height: 25px;
-    padding: 0px 2px 0 2px;
+  width: 25px;
+  height: 25px;
+  padding: 0px 2px 0 2px;
 } 
 
 .popularContainer {
-    padding: 0;
-    border: 1px solid white;
-    position: relative;
+  padding: 0;
+  border: 1px solid white;
+  position: relative;
 }
 
 .closeDetailXS {
-    display: block;
-    font-size: 1.2em;
-    text-align: center;
-    background: #0D47A1;
-    color: white;
-    font-weight: 200;
-    letter-spacing: 1px;
-    line-height: 2.5em;
-    margin-bottom: 15px;
+  display: block;
+  font-size: 1.2em;
+  text-align: center;
+  background: #0D47A1;
+  color: white;
+  font-weight: 200;
+  letter-spacing: 1px;
+  line-height: 2.5em;
+  margin-bottom: 15px;
 }
 
 .closeDetailXS:hover {
-    color: white;
+  color: white;
 }
 
 .thumbContainer {
-    padding: 0;
+  padding: 0;
 }
 
 .map {
-    height: 200px;
-    margin-bottom: 15px;
-    transition: height 0.3s;
-    display: none;
-    max-width: none;
+  height: 200px;
+  margin-bottom: 15px;
+  transition: height 0.3s;
+  display: none;
+  max-width: none;
 }
 
 .mapButton {
-    background: #E0E0E0;
-    display: inline-block;
-    padding: 3px 10px;
-    margin-top: 10px;
-    border-radius: 12px;
-    box-shadow: 0px 1px 6px rgba(0,0,0,0.4);
+  background: #E0E0E0;
+  display: inline-block;
+  padding: 3px 10px;
+  margin-top: 10px;
+  border-radius: 12px;
+  box-shadow: 0px 1px 6px rgba(0,0,0,0.4);
 }
 
 .likes {
-    text-align: right;
-    color: #0D47A1;
+  text-align: right;
+  color: #0D47A1;
 }
 
 .rating {
-    font-size: 1.4em;
-    color: #4CAF50;
-    margin-top: 10px;
+  font-size: 1.4em;
+  color: #4CAF50;
+  margin-top: 10px;
 }
 
 .ratingdisclaimer {
-    font-size: 0.5em;
-    color: grey;
+  font-size: 0.5em;
+  color: grey;
 }
 
 .mapToggle {
-    text-align: center;
+  text-align: center;
 }
 
 @media screen and (min-width: 768px) {
-    .map {
-        margin-top: 15px;
-        margin-bottom: 15px;
-    }
-    .venue {
-        height: 155px;
-        overflow: visible;
-    }
+  .map {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  .venue {
+    height: 155px;
+    overflow: visible;
+  }
+ 
+  .detailText {
+    position: relative;
+  }
     
-    .detailText {
-        position: relative;
-    }
+  .closeDetail {
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    background-color: red;
+    display: inline-block;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    padding: 3px;
+    cursor: pointer;
+  }
     
-    .closeDetail {
-        position: absolute;
-        top: 5px;
-        right: 20px;
-        background-color: red;
-        display: inline-block;
-        color: white;
-        border-radius: 50%;
-        width: 20px;
-        height: 20px;
-        padding: 3px;
-        cursor: pointer;
-    }
-    
-    .detail-title {
-        font-size: 1.6em;
-        margin-bottom: 0;
-    }
-    
-    .venue h5 {
-        font-size: 1.2em;
-        margin-bottom: 0;
-    }
-    
-    #query {
-        font-size: 1.8em;
-        height: 1.8em;
-    }
-    
-    .searchForm h4 {
-        text-align: left;
-    }
-    
-    .venue p {
-        font-size: 0.8em;
-        margin-bottom: 5px;
-        margin-top: 0;
-    }
-    
-    p.distance {
-        font-size: 0.7em;
-        padding: 0;
-        margin: 0;
-        position: relative;
-        top: -2px;
-        left: 30px;
-    }
-    
-    .venueThumb {
-        border: 5px solid #f2f2f2;
-        box-shadow: 0px 1px 4px rgba(0,0,0,0.4);
-    }
-    
-    .viewMoreVenue {
-        margin-top: 0px;
-        border-top: 0;
-    }
+  .detail-title {
+    font-size: 1.6em;
+    margin-bottom: 0;
+  }
+  
+  .venue h5 {
+    font-size: 1.2em;
+    margin-bottom: 0;
+  }
+ 
+  #query {
+    font-size: 1.8em;
+    height: 1.8em;
+  }
+  
+  .searchForm h4 {
+    text-align: left;
+  }
+  
+  .venue p {
+    font-size: 0.8em;
+    margin-bottom: 5px;
+    margin-top: 0;
+  }
+   
+  p.distance {
+    font-size: 0.7em;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    top: -2px;
+    left: 30px;
+  }
+  
+  .venueThumb {
+    border: 5px solid #f2f2f2;
+    box-shadow: 0px 1px 4px rgba(0,0,0,0.4);
+  }
+  
+  .viewMoreVenue {
+    margin-top: 0px;
+    border-top: 0;
+  }
 }
